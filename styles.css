@@ -1,0 +1,445 @@
+/* body = upper rectangle + text rectangle + table grid + lower rectangle  */
+/* upper rectangle = bottom box + top box  */
+/* bottom box = bottom box  */
+/* top box = logo + midbox */
+/* logo = logo */
+/* midbox = midup + middown */
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+  margin: 0;
+  padding-top: 100px;
+}
+
+/* body = upper rectanle + text rectangle + table grid +  */
+
+
+.upper-rectangle { /* My taskbar above the grids*/
+  position: fixed;
+  flex-direction: column;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  background-color: rgb(252, 251, 251);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.bottom-box {
+  width: calc(100% - 20px); /* Width almost equal to upper rectangle */
+  height: 35px; /* Height of the box */
+  border-radius: 20px; /* Rounded corners */
+  background-color: #fbfffd; /* Background color of the box */
+  background-color: rgb(231, 236, 247);
+  margin-top: 0px;
+  margin-bottom: 5px;
+  margin-right: 0px;
+  margin-left: 5px;
+}
+
+.bottom-box button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 0px 2px;
+  margin: 0 5px;
+  color: #4b4f56; /* Text color */
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.icon {
+  width: 12px; /* Adjust size as needed */
+  height: 12px; /* Adjust size as needed */
+}
+
+
+.top-box {
+  width: calc(100% - 20px); /* Width almost equal to upper rectangle */
+  height: 40px; /* Height of the box */
+  margin-top: 10px;
+
+  display: flex; /* Use flexbox */
+}
+
+
+.top-box .logo {
+  width: 3%; /* 5% width for the logo */
+ 
+  height: 40px;
+}
+
+.top-box .midbox {
+  flex: 1; /* Take up remaining space */
+  display: flex;
+  flex-direction: column; /* Stack midup and middown vertically */
+  justify-content: flex-start; /* Align items to the top */
+  font-size: smaller;
+  color: #a7dffc;
+  
+}
+
+.midbox .midup {
+  height: 15px;
+  flex: 1; /* Ensure equal height */
+  display: flex;
+  align-items: center; /* Center buttons vertically */
+  left: 5px;
+  
+}
+
+.midbox .middown {
+  height: 15px;
+  flex: 1; /* Ensure equal height */
+  display: flex;
+  
+  align-items: center; /* Center buttons vertically */
+  
+
+}
+
+.midup p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  color: #4b4f56;
+  margin-left: 5px;
+
+}
+
+
+
+.midbox .middown button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #242424; /* Text color */
+  margin-top: 5px;
+  font-size: 13px;
+  margin: 0 2px; /* Add margin between buttons */
+  margin-left: 0;
+  left: 0px;
+}
+.midbox .midup button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #242424; /* Text color */
+  margin-top: 5px;
+  font-size:13px;
+}
+
+
+
+.lower-rectangle {
+  /* My taskbar above the grids*/
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 25px;
+  background-color: #ffffff; /* Light grey background */
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: smaller;
+
+  /* Only top border */
+  border-top: 1px solid #ebebeb; /* Dark grey border */
+  border-right: none;
+  border-bottom: none;
+  border-left: none;
+}
+
+.text-rectangle {
+  position: fixed;
+  background-color: rgb(255, 255, 255);
+  height: 30px;
+  color: rgb(160, 16, 16);
+  position: fixed;
+  top: 100px; /* Adjust based on the height of upper-rectangle */
+  width: 100%;
+  border-bottom: 1px solid #a1a0a0;
+  display: flex;
+}
+
+
+.text-rectangle .left-rectangle {
+  width: calc(5% - 1px); /* 30% of the parent width minus 1px for the border */
+
+   /* Border at bottom of left rectangle */
+}
+
+
+ 
+.text-rectangle .left-rectangle p,
+.text-rectangle .right-rectangle p {
+  margin: 5px; /* Remove default margin */
+}
+
+.text-rectangle .left-rectangle p{
+  color: #020202;
+  position: relative;
+  font-size: small;
+  margin-top: 8px;
+}
+
+.grey-arrow-down {
+  position: absolute;
+  top: 10px; /* Adjust as needed */
+  left: 65px; /* Adjust as needed */
+  width: 10px; /* Adjust the width of the SVG */
+  height: auto; /* Maintain aspect ratio */
+  z-index: 10;
+}
+
+.gsheetlogo {
+  position: absolute;
+  bottom: 50px; /* Adjust as needed */
+  left: 15px; /* Adjust as needed */
+  width: 30px; /* Adjust the width of the SVG */
+  height: auto; /* Maintain aspect ratio */
+  z-index: 10;
+}
+
+.text-rectangle .right-rectangle p{
+  margin: 7px;
+}
+
+
+.text-rectangle .right-rectangle {
+  width: calc(95% - 1px); /* 70% of the parent width minus 1px for the border */
+  color: #a1a0a0;
+  font-size: small;
+}
+
+
+.table-container {
+ margin-top: 30px;
+ 
+}
+
+table {
+  top: 160px;
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid rgb(220, 220, 220);
+  font-family: Calibri, sans-serif;
+}
+
+
+
+th, td {
+  border: 0.5px solid rgb(193, 192, 192);
+  padding: 2px;
+  text-align: center;
+  font-weight: normal;
+  cursor: pointer;
+  font-size: small;
+  color: rgb(105, 104, 104);
+}
+
+th {
+  background-color: rgb(255, 252, 252);
+}
+
+
+td {
+  transition: transform 2s ease;
+}
+
+
+.expanded {
+  width: 250px;
+  height: 120px;
+  transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+  position: relative;
+}
+
+.login-form {
+  display: none;
+}
+
+.expanded .login-form {
+  display: block;
+}
+
+.highlighted {
+  border: 2px solid darkgreen;
+}
+
+.transition-color {
+  transition: background-color 2s ease-in-out;
+}
+
+
+
+.lower-rectangle {
+  /* My taskbar above the grids */
+  position: fixed;
+  bottom: 0;
+  left: 0; /* Change from right to left to align the rectangle to the left */
+  width: 100%;
+  height: 30px;
+  background-color: #ffffff; /* Light grey background */
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align items to the start (left) */
+  padding-left: 10px; /* Add padding to create some space from the left edge */
+
+  /* Only top border */
+  border-top: 1px solid #ebebeb; /* Dark grey border */
+  border-right: none;
+  border-bottom: none;
+  border-left: none;
+}
+
+.lower-rectangle .button-row {
+  display: flex;
+  gap: 15px; /* Add 10px spacing between buttons */
+  padding: 45px;
+}
+
+.midbox .midbutton-row {
+  display: flex;
+  
+  align-items: center;
+  
+  
+}
+
+.lower-rectangle button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 10px;
+  color: #777777; /* Text color */
+  border-bottom: 3px solid rgb(139, 139, 139);
+}
+
+.upper-rectangle button:hover {
+  background-color: #f8f9fa; /* Hover background color */
+}
+
+.upper-rectangle button.active {
+  background-color: #f8f9fa; /* Active background color */
+}
+
+.game-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.ball {
+  width: 20px;
+  height: 20px;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@keyframes bounce {
+  from {
+      top: 0;
+  }
+  to {
+      top: 100%;
+  }
+}
+
+.brick {
+  width: 15px;
+  height: 7.5px;
+  position: absolute;
+  background-color: rgba(35, 137, 115, 0.25);
+  border-radius: 3px;
+  border: 1px solid white;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.5);
+}
+
+.slide-down {
+  transform: translateY(200%);
+}
+
+.slide-up {
+  transform: translateY(-200%);
+}
+
+.adjacent-highlight {
+  border: 1px solid lightgreen;
+  background-color: lightgreen; /* Customizable lighter green */
+}
+
+.transition-all {
+  transition: all 2s ease;
+}
+
+
+#swirly{
+  position: absolute; /* Ensures Girly is positioned relative to the viewport */
+  width: 40px;
+  height: 40px;
+  background: radial-gradient(circle at center, #f0f8ff 0%, #e6f6fe 30%, #d9f4fc 60%, #bce8f8 80%, #a7dffc 100%); /* Creates a soft pink radial gradient */
+  border-radius: 50%; /* Makes Girly a perfect circle */
+  box-shadow: 0 0 5px rgba(255, 0, 255, 0.3); /* Adds a subtle pink shadow */
+  cursor: default; /* Removes the default pointer cursor */
+  transition: background 0.4s ease-in-out,transform 0.2s ease-in-out; /* Enables smooth animation when following the mouse */
+  z-index: 100;
+  opacity: 0.7;
+}
+
+
+
+.fade-out {
+  animation: fade-out 1s ease-in-out forwards;
+}
+
+@keyframes fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+
+
+.chakra-image {
+  position: fixed;
+  bottom: 25px; /* Adjust based on the height of the lower rectangle */
+  right: 10px; /* Adjust to position it correctly on the right end */
+  width: 50px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  z-index: 2; /* Ensure it appears on top of the lower rectangle */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for the jump */
+}
+
+.chakra-image img {
+  width: 50px; /* Fixed width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+
+
+
+
+
+

@@ -1,0 +1,30 @@
+1. I have tried replicating the Google sheets interface with my unique twist
+2. If I click on any cell, it gets highlighted by a dark gree border
+3. If I double click on a cell, I can write inside it.
+4. I can make the text bold, italic and underlined and change font colour.
+5. I need to be able to change font size, select multiple cells by dragging
+6. cell column row updates above
+7. as i type in cell above bar also gets updated dynamically with text
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5. H7: Has a login form, which if correctly used, highlights all cells with special abilities.
+6. D18: A random ball bounces inside the walls of D18 and hits bricks after which they disappear
+7. B5: Automated snake game via A* algorithm
+8. M2: Automated snake game via Djikshatra algorithm. it fails when it sees no possible path in current game loop. Need to work on that.
+9. Code for playable snake game is in GOOGLE SHEETS copy in one directory back.
+7. falling sand simulation in one cell
+8. snake game in another cell.

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grid Table</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="swirly"></div>
+  <div id="blur"></div> 
+
+  <div class="upper-rectangle">
+    <div class="top-box">
+      <div class="logo">
+        <img src="Graphics/gsheetlogo.svg" alt="Grey Arrow Down" class="gsheetlogo">
+      </div>
+      <div class="midbox">
+        <div class="midup">
+          <p>
+            Array of an L life
+          </p>
+         
+        </div>
+        <div class="middown">
+          <button>File</button>
+          <button>Edit</button>
+          <button>View</button>
+          <button>Insert</button>
+          <button>Format</button>
+          <button>Data</button>
+          <button>Tools</button>
+          <button>Extension</button>
+          <button>Help</button>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-box">
+      <div>
+        <button id="boldBtn" onclick="boldText()"><img class="icon" src="Graphics/bottomboxicons/Bold.svg" alt="Bold Icon"></button>
+        <button id="italicBtn" onclick="italicText()"><img class="icon" src="Graphics/bottomboxicons/Italics.svg" alt="Italic Icon"></button>
+        <button id="underlineBtn" onclick="underlineText()"><img class="icon" src="Graphics/bottomboxicons/underline.svg" alt="Underline Icon"></button>
+        <input type="color" id="fontColor" onchange="changeFontColor()">
+        <button id="WalkChakra" onclick="walkChakra()"><img class="icon" src="Graphics/bottomboxicons/walk.svg" alt="Walk Icon"></button>
+        <button id="StopChakra" onclick="stop()"><img class="icon" src="Graphics/bottomboxicons/stop.svg" alt="Stop Icon"></button>
+        <button id="bubbleSortBtn" onclick="swapCells()"><img class="icon" src="Graphics/bottomboxicons/4.svg" alt="Bubble Sort Icon"></button>
+        <button id="mergeSortBtn" onclick="enableDarkMode()"><img class="icon" src="Graphics/bottomboxicons/7.svg" alt="Merge Sort Icon"></button>
+        <button id="quickSortBtn" onclick="startSort('quickSort')"><img class="icon" src="Graphics/bottomboxicons/8.svg" alt="Quick Sort Icon"></button>
+        <button id="heapSortBtn" onclick="startSort('heapSort')"><img class="icon" src="Graphics/bottomboxicons/9.svg" alt="Heap Sort Icon"></button>
+        <button id="countingSortBtn" onclick="startSort('countingSort')"><img class="icon" src="Graphics/bottomboxicons/10.svg" alt="Counting Sort Icon"></button>
+        <button id="bucketSortBtn" onclick="startSort('bucketSort')"><img class="icon" src="Graphics/bottomboxicons/11.svg" alt="Bucket Sort Icon"></button>
+        <button id="Typetest" onclick="Typetestactivate();"><img class="icon" src="Graphics/bottomboxicons/12.svg" alt="Type Test Icon"></button>
+        <button id="Dashcolourchange" onclick="toggleBackgroundColors()"><img class="icon" src="Graphics/bottomboxicons/13.svg" alt="Theme Icon"></button>
+      </div>
+    </div>
+    
+
+  </div>
+
+  <div class="text-rectangle">
+    <div class="left-rectangle">
+      <p></p>
+      <img src="Graphics/greyarrowdown.svg" alt="Grey Arrow Down" class="grey-arrow-down">
+    </div>
+    <div class="right-rectangle" contenteditable="true">
+      <p>|</p>
+    </div>
+  </div>
+  
+  <div class="table-container">
+    <table id="gridTable">
+      <thead>
+        <tr>
+          <th class="header"></th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <div class="lower-rectangle">
+    <div class="button-row">
+      <button onclick="boldText()">Sheet 1</button>
+      <button onclick="italicText()">Sheet 2</button>
+      <button onclick="underlineText()">Sheet 3</button>
+    </div>
+  </div>
+
+  <img src="Graphics/stand_nothing_left.svg" alt="Chakra" class="chakra-image">
+
+  <script src="General.js"></script>
+  <script src="Text.js"></script>
+  <script src="Cells/D18.js"></script>
+  <script src="Cells/H7.js"></script>
+  <script src="Cells/B5.js"></script>
+  <script src="Initiate.js"></script>
+  <script src="Main.js"></script>
+  <script src="Cells/Snakesim/test.js"></script>
+
+  <!-- Snake game Simulation files-->
+  <script src="Cells/Snakesim/playable.js"></script>
+  <script src="Cells/Snakesim/Djikshatra.js"></script>
+  <script src="Cells/Snakesim/Dji_crasheswhenseesnopath.js"></script>
+  <script src="Cells/Snakesim/Dji_cantavoidmybody.js"></script>
+  <script src="Cells/Snakesim/Dji_stratergicwhenfindnopath.js"></script>
+</body>
+</html>
